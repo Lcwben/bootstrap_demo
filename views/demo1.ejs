@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=5.0, minimum-scale=0.1">
+    <title>window_demo</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/demostyle.css' />
+</head>
+<body>
+    <div class="normal_div title"><strong>宽带施工流程图</strong></div>
+
+    <div class="normal_div order_no"><p>订单编号:<%=order_no %></p></div>
+
+    <div class="normal_div node_exp">
+        <ul class="list-unstyled list-inline">
+            <li>原始节点</li>
+            <li></li>
+            <li>成功节点</li>
+            <li></li>
+            <li>失败节点</li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div>节点流程DIV</div>
+
+    <div class="normal_div line_detail">
+        <p>最后环节名称：
+            <span style="color: red"><%=link_name %></span> &nbsp;&nbsp;最后环节反馈处理意见：<%=feedback %>&nbsp;&nbsp;
+        </p>
+    </div>
+
+    <div class="row">
+        <table class="table-responsive normal_table">
+            <tr>
+                <td>装维人员：<%=maintainer %></td>
+                <td>装维人员联系电话：<%=phone %></td>
+                <td>装维人员所属部门：<%=maintain_department %></td>
+            </tr>
+            <tr>
+                <td>退单原因：</td>
+            </tr>
+            <tr>
+                <td>反馈处理意见：<%=feedback %></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+    <script type="text/javascript" src="/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.js"></script>
+</html>

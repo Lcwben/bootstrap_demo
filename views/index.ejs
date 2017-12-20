@@ -7,8 +7,6 @@
     <title>demo1</title>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-     <link rel="stylesheet/less" type="text/css" href="/stylesheets/styleless.less">
-
   </head>
   <body>
     <div class="container">
@@ -40,14 +38,54 @@
       <p>
         当然，小明很快就不那么想了，因为依赖外部网站有很多意外因素，而且受限于网络和网速，其次他们也没提供有关接口来调用。但是他们都提供了一些算法之类的工具等。这样可以在本地调用这些工具，来完成这些操作，甚至连网络也不需要。
         小明愉快的开始在笔记本上构思这个工具的开发方法和需要的功能：
-        首先我需要先开发一个工具，可以调用这个工具对我的某个项目目录里面的项目文件做一些操作，比如压缩、查错、合并等。
+        <strong>首先我需要先开发一个工具，可以调用这个工具对我的某个项目目录里面的项目文件做一些操作，比如压缩、查错、合并等。</strong>
         如果要做成一个工具，可能不太好，或许别人还需要更多功能，但是我没法开发这么多功能啊。要不我就做个框架把，然后每个功能做成一个插件，比如压缩插件、合并插件。如果有人需要在他的项目里压缩某个文件，他安装一下我这个工具然后再安装压缩插件就好了。这样有更多需求的人，可以自己编写功能插件，然后配合我的工具使用。
         慢着，他安装完了工具和插件之后，要怎么来调用这个插件来处理项目文件？在程序界面上选择文件，然后勾选选项？我的天，我就会写点 JS，哪里可能开发带有界面的程序？慢着，用 JS ？他可以在项目文件夹中编写一个 JS 来设置任务啊！然后我的工具会读取这个 JS，解析之后获得他要执行的任务（比如压缩某某文件并改名成某某），然后调用插件完成任务。
         太棒了。但是插件这么多，放在项目里肯定很大，而且又是不相关代码，要不等他发布的时候自动删除这些插件文件把？不行，如果他要发给别人，别人要继续开发，还得重新安装依次安装这些插件，然后执行任务。那怎么办？要不我再用个文件记录一下当前项目中安装或者需要的插件把！这样只需要把这个文件和 JS 任务文件放在项目目录里面，有需要的人，直接输入一条命令安装一下，然后立刻就可以执行了。
         <del>我太聪明了！</del>
       </p>
+
+      <hr>
+      <div class="row">
+        <p class="text-right">text-right</p>
+        <p class="text-center">text-center</p>
+        <p class="text-danger">text-danger</p>
+        <p class="text-justify">text-justify</p>
+        <p class="text-capitalize">text-capitalize</p>
+        <p class="text-hide">text-hide</p>
+        <p class="text-nowrap">测试text-nowrap数据，字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数</p>
+        <p>Error缩写为 <abbr title="attribute">Err</abbr>！</p>
+        <p></p>
+      </div>
+
+      <hr>
+      <div class="row">
+        <ul class='list-inline'>
+          <li>测试1</li>
+          <li>测试2</li>
+          <li>测试3</li>
+          <li>测试4</li>
+        </ul>
+      </div>
+
+      <hr>
+      <div class="row">
+        <dl class="dl-horizontal">
+          <dt>less</dt>
+          <dd>动态的，需编译的，编程式的页面样式语言。</dd>
+          <dt>css</dt>
+          <dd>静态的，解释型的 页面样式语言。</dd>
+        </dl>
+      </div>
       </div>
   </body>
+  <footer>
+    <address>
+      Southern Communication Building <br>
+      Tianhe District <br>
+      Guangzhou City <br>
+    </address>
+  </footer>
   <script type="text/javascript" src="/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.js"></script>
 </html>

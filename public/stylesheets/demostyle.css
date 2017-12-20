@@ -1,0 +1,48 @@
+/* demo文件的CSS样式 */
+
+/*************************************** demo1 CSS start *********************************************/
+/*DIV通用*/
+div.normal_div {
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px 3px 3px 3px;
+    font-size: medium;
+}
+
+/*table通用*/
+.normal_table {
+    width: 50%;
+    height: 100px;
+}
+
+/*标题行*/
+.title {
+    height: 35px;
+    margin-bottom: 10px;
+    border: lightskyblue 1px solid;
+    text-align: left;
+    background-color: #dedcff;
+    color: red;
+}
+
+/*“订单编号”行*/
+.order_no{
+    height: 40px;
+    border: lightskyblue 1px solid;
+    text-align: center;
+    background-color: #dedcff;
+}
+
+/*节点示例行*/
+div.node_exp {
+    height: 80px;
+    border: lightskyblue 1px solid;
+    padding: 10px 25%;
+}
+
+/*详细环节行*/
+.line_detail {
+    border: lightskyblue 1px solid;
+    background-color: #dedcff;
+}
+/*************************************** demo1 CSS end *********************************************/

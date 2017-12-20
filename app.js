@@ -8,6 +8,7 @@ var less = require('less');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var demos = require('./routes/demos');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/', demos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
