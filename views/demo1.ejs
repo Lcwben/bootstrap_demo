@@ -18,7 +18,7 @@
     <div class="normal_div node_exp">
         <ul class="list-unstyled list-inline">
             <li>原始节点</li>
-            <li><span class="node raw_node" src="../images/processes-icon.gif"></span></li>
+            <li><span class="node raw_node"></span></li>
             <li>成功节点</li>
             <li><span class="node success_node"></span></li>
             <li>失败节点</li>
@@ -31,7 +31,7 @@
         <table>
             <tr>
             <% for (let i=0; i<flow_details.length; i++) { %>
-                <td>
+                <td class="text-center">
                     <span class="node <%=success==true?'success_node':'raw_node' %>"></span>
                 </td>
                 <% if(i<flow_details.length-1) { %>
@@ -49,19 +49,6 @@
                 <% } %>
             <% } %>
             </tr>
-            <!--<li><span class="link_node"></span></li>
-            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
-            <li><span class="link_node"></span></li>
-            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
-            <li><span class="link_node"></span></li>
-            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
-            <li><span class="link_node"></span></li>
-            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
-            <li><span class="link_node"></span></li>
-            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
-            <li><span class="link_node"></span></li>
-            <li><span class="<%=fail==true?'success_node':'raw_node' %>"></span></li>-->
-
         </table>
     </div>
 
