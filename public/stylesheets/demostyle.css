@@ -45,4 +45,31 @@ div.node_exp {
     border: lightskyblue 1px solid;
     background-color: #dedcff;
 }
+
+/*节点图标*/
+span.node {
+    width: 29px;
+    height: 29px;
+    display: block;
+    background: url("../images/processes-icon.gif");
+}
+
+/*“原始节点”*/
+span.raw_node {
+    background-position: 0 -29px;
+}
+
+/*“成功节点”*/
+span.success_node {
+    background-position: 0 0;
+}
+
+/*连接节点*/
+.node_flow span.link_node {
+    width: 52px;
+    height: 12px;
+    display: inline-block;
+    background: url("../images/loadpont.gif");
+}
+
 /*************************************** demo1 CSS end *********************************************/

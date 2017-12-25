@@ -14,18 +14,57 @@
 
     <div class="normal_div order_no"><p>订单编号:<%=order_no %></p></div>
 
+    <!-- 节点类型DIV -->
     <div class="normal_div node_exp">
         <ul class="list-unstyled list-inline">
             <li>原始节点</li>
-            <li></li>
+            <li><span class="node raw_node" src="../images/processes-icon.gif"></span></li>
             <li>成功节点</li>
-            <li></li>
+            <li><span class="node success_node"></span></li>
             <li>失败节点</li>
-            <li></li>
+            <li><span class="node fail_node"></span></li>
         </ul>
     </div>
 
-    <div>节点流程DIV</div>
+    <!-- 节点流程DIV -->
+    <div class="normal_div node_flow">
+        <table>
+            <tr>
+            <% for (let i=0; i<flow_details.length; i++) { %>
+                <td>
+                    <span class="node <%=success==true?'success_node':'raw_node' %>"></span>
+                </td>
+                <% if(i<flow_details.length-1) { %>
+                <td><span class="link_node"></span></td>
+                <% } %>
+            <% } %>
+            </tr>
+            <tr>
+            <% for (let i=0; i<flow_details.length; i++) { %>
+                <td>
+                    <div><p><%=flow_details[i].segment %></p><p><%=flow_details[i].date %></p><p><%=flow_details[i].time %></p></div>
+                </td>
+                <% if(i<flow_details.length-1) { %>
+                <td></td>
+                <% } %>
+            <% } %>
+            </tr>
+            <!--<li><span class="link_node"></span></li>
+            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
+            <li><span class="link_node"></span></li>
+            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
+            <li><span class="link_node"></span></li>
+            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
+            <li><span class="link_node"></span></li>
+            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
+            <li><span class="link_node"></span></li>
+            <li><span class="<%=success==true?'success_node':'raw_node' %>"></span></li>
+            <li><span class="link_node"></span></li>
+            <li><span class="<%=fail==true?'success_node':'raw_node' %>"></span></li>-->
+
+        </table>
+    </div>
+
 
     <div class="normal_div line_detail">
         <p>最后环节名称：
