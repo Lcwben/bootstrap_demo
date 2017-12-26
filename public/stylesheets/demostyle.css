@@ -54,6 +54,12 @@ span.node {
     background: url("../images/processes-icon.gif");
 }
 
+div table#flow_table tr td {
+    width: 87px;
+    height: 80px;
+    min-height: 80px;
+}
+
 /*“原始节点”*/
 span.raw_node {
     background-position: 0 -29px;

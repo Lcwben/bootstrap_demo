@@ -8,6 +8,7 @@ var data = {
     maintainer : '测试装维人员',
     phone : '13900012345',
     maintain_department : '装维部门1',
+    return_reason : '不详',
     success : true,
     fail : false,
     flow_details : [

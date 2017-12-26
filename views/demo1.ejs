@@ -10,8 +10,10 @@
     <link rel='stylesheet' href='/stylesheets/demostyle.css' />
 </head>
 <body>
+    <!-- 标题DIV -->
     <div class="normal_div title"><strong>宽带施工流程图</strong></div>
 
+    <!-- 订单编号DIV -->
     <div class="normal_div order_no"><p>订单编号:<%=order_no %></p></div>
 
     <!-- 节点类型DIV -->
@@ -28,21 +30,25 @@
 
     <!-- 节点流程DIV -->
     <div class="normal_div node_flow">
-        <table>
+        <table id="flow_table">
             <tr>
             <% for (let i=0; i<flow_details.length; i++) { %>
-                <td class="text-center">
+                <td align="center">
                     <span class="node <%=success==true?'success_node':'raw_node' %>"></span>
                 </td>
                 <% if(i<flow_details.length-1) { %>
-                <td><span class="link_node"></span></td>
+                <td align="center"><span class="link_node"></span></td>
                 <% } %>
             <% } %>
             </tr>
             <tr>
             <% for (let i=0; i<flow_details.length; i++) { %>
                 <td>
-                    <div><p><%=flow_details[i].segment %></p><p><%=flow_details[i].date %></p><p><%=flow_details[i].time %></p></div>
+                    <div>
+                        <p class="text-center"><%=flow_details[i].segment %></p>
+                        <p class="text-center"><%=flow_details[i].date %></p>
+                        <p class="text-center"><%=flow_details[i].time %></p>
+                    </div>
                 </td>
                 <% if(i<flow_details.length-1) { %>
                 <td></td>
@@ -52,13 +58,14 @@
         </table>
     </div>
 
-
+    <!-- 环节详细DIV -->
     <div class="normal_div line_detail">
         <p>最后环节名称：
             <span style="color: red"><%=link_name %></span> &nbsp;&nbsp;最后环节反馈处理意见：<%=feedback %>&nbsp;&nbsp;
         </p>
     </div>
 
+    <!-- 装维信息DIV -->
     <div class="row">
         <table class="table-responsive normal_table">
             <tr>
@@ -67,7 +74,7 @@
                 <td>装维人员所属部门：<%=maintain_department %></td>
             </tr>
             <tr>
-                <td>退单原因：</td>
+                <td>退单原因：<%=return_reason %></td>
             </tr>
             <tr>
                 <td>反馈处理意见：<%=feedback %></td>
