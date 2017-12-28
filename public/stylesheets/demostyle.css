@@ -21,7 +21,8 @@ div.normal_div {
     margin-bottom: 10px;
     border: lightskyblue 1px solid;
     text-align: left;
-    background-color: #dedcff;
+    background: linear-gradient(#dedcff,#bce8f1); /*背景色渐变效果，IE10以下不支持*/
+    /*background-color:#dedcff;*/
     color: red;
 }
 
@@ -36,14 +37,15 @@ div.normal_div {
 /*节点示例行*/
 div.node_exp {
     height: 80px;
-    border: lightskyblue 1px solid;
-    padding: 10px 25%;
+    padding: 20px 25%;
+
 }
 
 /*详细环节行*/
 .line_detail {
     border: lightskyblue 1px solid;
     background-color: #dedcff;
+    text-align: center;
 }
 
 /*节点图标*/
@@ -54,6 +56,7 @@ span.node {
     background: url("../images/processes-icon.gif");
 }
 
+/*详细环节行table样式*/
 div table#flow_table tr td {
     width: 87px;
     height: 80px;
